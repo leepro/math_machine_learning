@@ -71,3 +71,60 @@
 |                          | `np.linalg.solve`                                                                                              | `np.linalg.solve([[1, 2], [3, 4]], [5, 6])` → `[1 -2]` (solves Ax = b)                     |
 |                          | `np.linalg.matrix_rank`                                                                                        | `np.linalg.matrix_rank([[1, 2], [2, 4]])` → `1` (rank)                                     |
 |                          | `np.linalg.eigh`                                                                                               | `np.linalg.eigh([[1, 0], [0, 1]])` → eigenvalues, eigenvectors (Hermitian)                 |
+
+# Examples
+
+# 10 Basic NumPy Examples in One Block
+
+```python
+import numpy as np
+
+# 1. Creating an Array: Converts a list to a NumPy array
+arr = np.array([1, 2, 3, 4])
+print("1:", arr)  # Output: [1 2 3 4]
+
+# 2. Generating Zeros: Creates an array of zeros
+zeros = np.zeros(5)
+print("2:", zeros)  # Output: [0. 0. 0. 0. 0.]
+
+# 3. Evenly Spaced Numbers: Generates numbers with a step
+range_arr = np.arange(0, 10, 2)
+print("3:", range_arr)  # Output: [0 2 4 6 8]
+
+# 4. Reshaping an Array: Changes array shape to 2x3
+arr = np.array([1, 2, 3, 4, 5, 6])
+reshaped = np.reshape(arr, (2, 3))
+print("4:", reshaped)  # Output: [[1 2 3] [4 5 6]]
+
+# 5. Matrix Multiplication: Computes dot product
+a = np.array([1, 2])
+b = np.array([3, 4])
+dot_product = np.dot(a, b)
+print("5:", dot_product)  # Output: 11
+
+# 6. Finding the Mean: Calculates average
+data = np.array([1, 2, 3, 4, 5])
+mean_val = np.mean(data)
+print("6:", mean_val)  # Output: 3.0
+
+# 7. Element-Wise Square Root: Applies sqrt to each element
+nums = np.array([4, 9, 16])
+sqrt_nums = np.sqrt(nums)
+print("7:", sqrt_nums)  # Output: [2. 3. 4.]
+
+# 8. Stacking Arrays Vertically: Stacks rows
+a = np.array([1, 2])
+b = np.array([3, 4])
+stacked = np.vstack((a, b))
+print("8:", stacked)  # Output: [[1 2] [3 4]]
+
+# 9. Random Numbers: Generates random floats (0-1)
+np.random.seed(42)  # For reproducibility
+rand_nums = np.random.rand(3)
+print("9:", rand_nums)  # Output: [0.37454012 0.95071431 0.73199394]
+
+# 10. Maximum Value: Finds the largest value
+arr = np.array([5, 2, 8, 1, 9])
+max_val = np.max(arr)
+print("10:", max_val)  # Output: 9
+```
