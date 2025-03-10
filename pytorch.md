@@ -66,3 +66,58 @@
 |                          | `torch.linalg.solve`                                                                                           | `torch.linalg.solve(torch.tensor([[1., 2.], [3., 4.]]), torch.tensor([5., 6.]))` → `tensor([1., -2.])` |
 |                          | `torch.linalg.matrix_rank`                                                                                     | `torch.linalg.matrix_rank(torch.tensor([[1., 2.], [2., 4.]]))` → `tensor(1)` (rank)        |
 |                          | `torch.linalg.eigh`                                                                                            | `torch.linalg.eigh(torch.tensor([[1., 0.], [0., 1.]]))` → eigenvalues, eigenvectors        |
+
+# Examples
+
+```python
+import torch
+
+# 1. Creating a Tensor: Converts a list to a PyTorch tensor
+tensor = torch.tensor([1, 2, 3, 4])
+print("1:", tensor)  # Output: tensor([1, 2, 3, 4])
+
+# 2. Generating Zeros: Creates a tensor of zeros
+zeros = torch.zeros(5)
+print("2:", zeros)  # Output: tensor([0., 0., 0., 0., 0.])
+
+# 3. Evenly Spaced Numbers: Generates numbers with a step
+range_tensor = torch.arange(0, 10, 2)
+print("3:", range_tensor)  # Output: tensor([0, 2, 4, 6, 8])
+
+# 4. Reshaping a Tensor: Changes tensor shape to 2x3
+tensor = torch.tensor([1, 2, 3, 4, 5, 6])
+reshaped = torch.reshape(tensor, (2, 3))
+print("4:", reshaped)  # Output: tensor([[1, 2, 3], [4, 5, 6]])
+
+# 5. Matrix Multiplication: Computes dot product
+a = torch.tensor([1, 2])
+b = torch.tensor([3, 4])
+dot_product = torch.matmul(a, b)
+print("5:", dot_product)  # Output: tensor(11)
+
+# 6. Finding the Mean: Calculates average (requires float tensor)
+data = torch.tensor([1., 2., 3., 4., 5.])
+mean_val = torch.mean(data)
+print("6:", mean_val)  # Output: tensor(3.)
+
+# 7. Element-Wise Square Root: Applies sqrt to each element
+nums = torch.tensor([4., 9., 16.])
+sqrt_nums = torch.sqrt(nums)
+print("7:", sqrt_nums)  # Output: tensor([2., 3., 4.])
+
+# 8. Stacking Tensors Vertically: Stacks rows
+a = torch.tensor([1, 2])
+b = torch.tensor([3, 4])
+stacked = torch.vstack((a, b))
+print("8:", stacked)  # Output: tensor([[1, 2], [3, 4]])
+
+# 9. Random Numbers: Generates random floats (0-1)
+torch.manual_seed(42)  # For reproducibility
+rand_nums = torch.rand(3)
+print("9:", rand_nums)  # Output: tensor([0.1915, 0.6221, 0.4377])
+
+# 10. Maximum Value: Finds the largest value
+tensor = torch.tensor([5, 2, 8, 1, 9])
+max_val = torch.max(tensor)
+print("10:", max_val)  # Output: tensor(9)
+```
