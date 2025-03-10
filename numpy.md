@@ -74,8 +74,6 @@
 
 # Examples
 
-# 10 Basic NumPy Examples in One Block
-
 ```python
 import numpy as np
 
